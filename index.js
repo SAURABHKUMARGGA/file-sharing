@@ -20,6 +20,10 @@ io.on("connection", (socket) => {
     console.log(message);
     io.emit("message", message);
   });
+  socket.on("image",(image)=>{
+    console.log(image);
+    io.emit("image",image);
+  })
   socket.on("disconnect", () => {
     console.log("a user disconnected");
   });
